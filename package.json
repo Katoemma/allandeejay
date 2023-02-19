@@ -1,5 +1,24 @@
 {
-  "devDependencies": {
+  "name": "allan-deejay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build src/styles.css -o public/styles.css",
+    "watch": "tailwindcss build src/styles.css -o public/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katoemma/allandeejay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Katoemma/allandeejay/issues"
+  },
+  "homepage": "https://github.com/Katoemma/allandeejay#readme",
+  "dependencies": {
     "tailwindcss": "^3.2.7"
   }
 }
