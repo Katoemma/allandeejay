@@ -36,32 +36,50 @@
                 <li><a href="#">Contact</a></li>
             </div>
         </div>
+        <!--menu icon-->
         <span class="lg:hidden" onclick="openNav()"><img src="assets/menu.png" alt="menu"></div></span>
     </nav>
-    <main>
+    <!--the main content-->
+    <main class="flex flex-col justify-between">
+        <!--hero page-->
         <div class="hero-page">
-            <img id="hero-img" src="img/herosugg.jpg" alt="hero" >
-            <div class="red-box"></div>
-            <div class="hero-text">
-                <h2 id="tracks">Tracks</h2>
-                <h1 id="urban">Urban & Local</h1>
-                <button style="border: none;"><a href="#">GET TICKETS</a></button>
+            <!--Hero image-->
+            <div class="h-48 w-full ">
+                <img id="hero-img" src="img/party-table-mini.jpg" alt="hero" >
+            </div>
+           <!--the red box design-->
+            <!--<div class="w-72 h-56 border-10 border-solid border-red border-t-none top-{270px} left-8 z-1 opacity-0.3"></div>-->
+            <!--the hero text-->
+            <div class="flex  flex-col gap-2.5 top-[50%] left-[10%] p-9 items-center text-center" style="border:2px solid white">
+                <h2 class="text-logoBg font-thin" id="tracks">Tracks</h2>
+                <h1 class="text-3xl text-white font-extrabold" style="color: #ffffff;" id="urban">Allan deejay <br>experience</h1>
+                <!--ticket button-->
+                <button class=" px-6 text-center p-2.5 bg-navBg" style="border: none;">
+                    <a style="text-decoration: none; font-size:16px; color:#ffffff" href="#">GET TICKETS</a>
+                </button>
             </div>
         </div>
-        <div class="biography">
-            <div class="bio-img">
+        <!--biography-->
+        <div class="flex flex-col justify-between">
+            <!--hero image-->
+            <div class="bg-heroBg">
                 <img src="img/c-hero.png" alt="herooo">
             </div>
-            <div class="bio-text">
-                <div class="bio-text-heading">
-                    <h2>WELCOME</h2>
-                    <h1>MY BIOGRAPHY</h1>
+            <!--boigaphy text -->
+            <div class="flex flex-col justify-between p-6 py-24 bg-blackBg gap-4">
+                <!--biography text heading-->
+                <div class="flex flex-col justify-between text-center text-white">
+                    <h2 class="text-lg font-semibold text-whiteText">WELCOME</h2>
+                    <h1 class="text-4xl font-bold text-whiteText">MY BIOGRAPHY</h1>
                 </div>
-                <div class="bio-text-para">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    <button><a href="#">View More</a></button>
+                <!--biography description paragraph-->
+                <div class="text-base flex flex-col gap-4 ">
+                    <p class="text-whiteText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <!-- the view more button -->
+                    <button class="bg-btnBg py-2 px-8 w-40"><a href="#" class="text-whiteText">View More</a></button>
                 </div>
             </div>
+            <!--end of the biography text-->
         </div>
         <div class="instagram-follow">
             <div class="insta-link">
