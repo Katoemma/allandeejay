@@ -13,7 +13,7 @@
 </head>
 <body>
     <!--allan deejay logo-->
-    <div class="flex justify-center p-5 md:hidden bg-logoBg">
+    <div class="flex justify-center p-5 md:hidden bg-blackBg">
         <div class="w-24">
             <img src="img/dj logo.png" alt="logo">
         </div>
@@ -30,10 +30,10 @@
             <span class="absolute right-10 top-10 lg:hidden" onclick="closeNav()"><img src="assets/close.png" alt="close"></span>
             <!--navigation links-->
             <div class="absolute list-none flex flex-col justify-between mt-40 p-5 gap-7 left-28 lg:flex-row ">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Hire</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="text-white" href="#">Home</a></li>
+                <li><a class="text-white" href="#">Hire</a></li>
+                <li><a class="text-white" href="#">About</a></li>
+                <li><a class="text-white" href="#">Contact</a></li>
             </div>
         </div>
         <!--menu icon-->
@@ -44,9 +44,9 @@
         <!--hero page-->
         <div class="hero-page">
             <!--Hero image-->
-            <div class="h-48 w-full ">
+            <div class="h-48  w-full md:h-auto ">
                 <img class="md:hidden" id="hero-img" src="img/party-table-mini.jpg" alt="hero" >
-                <img class="hidden md:block" src="img/party-table.jpg" alt="table">
+                <img class="hidden md:block " src="img/party-table.jpg" alt="table">
             </div>
            <!--the red box design-->
             <!--<div class="w-72 h-56 border-10 border-solid border-red border-t-none top-{270px} left-8 z-1 opacity-0.3"></div>-->
@@ -107,7 +107,10 @@
                     <button class="bg-grayishBg px-9 py-3" id="more-galleries"><a href="#" class="flex gap-1"><img src="assets/gallery.svg" alt=""> Galleries</a></button>
                 </div>
             </div>
-            <div class="gallery">
+             <!--end of instagram and galery container-->
+
+             <!--photo gallery-->
+            <div class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
                 <img src="img/Party-Background-HD.jpg" alt="image" class="party-image">
                 <img src="img/Party-Background-HD.jpg" alt="image" class="party-image">
                 <img src="img/Party-Background-HD.jpg" alt="image" class="party-image">
@@ -206,6 +209,13 @@
             </form>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script>
+        function openNav(){
+            document.getElementById("navlist").style.height = '100%'
+        }
+        function closeNav(){
+            document.getElementById("navlist").style.height = '0%'
+        }
+    </script>
 </body>
 </html>
