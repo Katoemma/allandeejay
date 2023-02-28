@@ -16,6 +16,7 @@ module.exports = {
       'whiteText': '#ffffff',
       'btnBg': '#F00606',
       'blackBg': '#000000',
+      'grayishBg': '#CCCCCC',
     },
     fontFamily: {
       'montserrat': 'montserrat',
