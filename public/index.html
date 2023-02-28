@@ -45,7 +45,8 @@
         <div class="hero-page">
             <!--Hero image-->
             <div class="h-48 w-full ">
-                <img id="hero-img" src="img/party-table-mini.jpg" alt="hero" >
+                <img class="md:hidden" id="hero-img" src="img/party-table-mini.jpg" alt="hero" >
+                <img class="hidden md:block" src="img/party-table.jpg" alt="table">
             </div>
            <!--the red box design-->
             <!--<div class="w-72 h-56 border-10 border-solid border-red border-t-none top-{270px} left-8 z-1 opacity-0.3"></div>-->
@@ -61,17 +62,20 @@
         </div>
         <!--biography-->
         <div class="flex flex-col justify-between">
+
             <!--hero image-->
             <div class="bg-heroBg" style="background-image: url(img/Smoke-HD.jpg);">
                 <img src="img/c-hero.png" alt="herooo">
             </div>
             <!--boigaphy text -->
             <div class="flex flex-col justify-between p-6 py-24 bg-blackBg gap-4">
+
                 <!--biography text heading-->
                 <div class="flex flex-col justify-between text-center text-white">
                     <h2 class="text-lg font-semibold text-whiteText">WELCOME</h2>
                     <h1 class="text-4xl font-bold text-whiteText">MY BIOGRAPHY</h1>
                 </div>
+
                 <!--biography description paragraph-->
                 <div class="text-base flex flex-col gap-4 ">
                     <p class="text-whiteText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
@@ -81,14 +85,26 @@
             </div>
             <!--end of the biography text-->
         </div>
-        <div class="instagram-follow">
-            <div class="insta-link">
-                <div class="Insta-text">
-                    <h2>FOLLOW ME ON INSTAGRAM <br><span style="color: #c71642;"> #AllanDeejay</span></h2>
+        <!--end of biography container-->
+
+        <!--instagram and gallery container-->
+        <div class="flex flex-col gap-4 py-8">
+
+            <!--Instagram username and buttons container -->
+            <div class="flex flex-col justify-between gap-4">
+                <!--the username text-->
+                <div class="p-8 text-center ">
+                    <h2 class="text-4xl font-bold">FOLLOW ME ON INSTAGRAM <br><span style="color: #c71642;"> #AllanDeejay</span></h2>
                 </div>
-                <div class="insta-btns">
-                    <button id="instagram"><a href="#" style="color:#ffffff"><img style="width: 25px;" src="assets/277-2773517_instagram-png-white.png" alt=""> Instagram</a></button>
-                    <button id="more-galleries"><a href="#"><img src="assets/gallery.svg" alt=""> Galleries</a></button>
+
+                <!--the instagram and gallery button-->
+                <div class="flex justify-between px-3">
+                    
+                    <!--instagram button-->
+                    <button class="bg-btnBg px-9 py-3" id="instagram"><a href="#" class="flex gap-1" style="color:#ffffff"><img style="width: 25px;" src="assets/277-2773517_instagram-png-white.png" alt=""> Instagram</a></button>
+                    
+                    <!--gallery button-->
+                    <button class="bg-grayishBg px-9 py-3" id="more-galleries"><a href="#" class="flex gap-1"><img src="assets/gallery.svg" alt=""> Galleries</a></button>
                 </div>
             </div>
             <div class="gallery">
