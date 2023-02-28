@@ -9,16 +9,22 @@ module.exports = {
       xl: '1200px',
     },
     colors: {
-      'logoBg': '#ccc6c6',
-      'navBg' : '#000033',
+      'logoBg': '#F50C41',
+      'navBg' : '#F00606',
+      'myBlue': '#060BF0',
       'lightishBlue': '#000099',
-      'borderBg': '#d9d9de',
-      'btnBg': '#e60000',
+      'whiteText': '#ffffff',
+      'btnBg': '#F00606',
+      'blackBg': '#000000',
     },
     fontFamily: {
       'montserrat': 'montserrat',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'heroBg': "url('/public/img/smoke-HD.jpg')",
+      }
+    },
   },
   plugins: [],
 }
