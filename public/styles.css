@@ -621,10 +621,6 @@ video {
   height: 14rem;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .w-20 {
   width: 5rem;
 }
@@ -689,10 +685,6 @@ video {
   gap: 1.75rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .overflow-y-hidden {
   overflow-y: hidden;
 }
@@ -728,6 +720,10 @@ video {
 .bg-navBg {
   --tw-bg-opacity: 1;
   background-color: rgb(240 6 6 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
 .bg-heroBg {
@@ -882,10 +878,6 @@ video {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
