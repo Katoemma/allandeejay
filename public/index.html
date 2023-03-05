@@ -16,9 +16,15 @@
     #navlist{
         background-image:linear-gradient(to right, purple, red);
     }
+    #heroimage{
+        
+    }
     @media only screen and (min-width: 768px) {
         #navlist{
             background: none;
+        }
+        #heroimage{
+            background-color: black;
         }
     }
 </style>
@@ -41,12 +47,16 @@
             <span class="absolute right-10 top-10 md:hidden lg:hidden" onclick="closeNav()"><img src="assets/close.png" alt="close"></span>
             <!--navigation links-->
             <div class="list-none flex flex-col justify-between mt-40 p-5 gap-7 left-28 md:flex-row md:mt-auto md:justify-center md:p-1 md:text-2xl ">
-                <li><a class="text-3xl md:text-2xl " style="color: #ffffff;" href="#">Home</a></li>
-                <li><a class="text-3xl md:text-2xl " style="color: #ffffff;" href="#">Hire</a></li>
-                <li><a class="text-3xl md:text-2xl " style="color: #ffffff;" href="#">About</a></li>
-                <li><a class="text-3xl md:text-2xl " style="color: #ffffff;" href="#">Contact</a></li>
+                <li><a class="text-whiteText text-3xl md:text-xl lg:text-xl md:hover:text-blackBg"  href="#">Home</a></li>
+                <li><a class="text-whiteText text-3xl md:text-xl lg:text-xl md:hover:text-blackBg" href="#">Hire</a></li>
+                <li><a class="text-whiteText text-3xl md:text-xl lg:text-xl md:hover:text-blackBg" href="#">About</a></li>
+                <li><a class="text-whiteText text-3xl md:text-xl lg:text-xl md:hover:text-blackBg" href="#">Contact</a></li>
             </div>
         </div>
+        <!--hire now button-->
+        <button class="hidden md:block px-8 text-center p-2 bg-whiteText rounded-2xl hover:bg-navBg hover:text-whiteText" style="border: none;">
+            <a class="text-navBg hover:text-whiteText" style="text-decoration: none; font-size:16px;" href="#">Hire</a>
+        </button>
         <!--menu icon-->
         <span class="lg:hidden" onclick="openNav()"><img src="assets/menu.png" alt="menu"></div></span>
     </nav>
@@ -55,11 +65,11 @@
         <!--hero page-->
         <div class="hero-page">
              <!--the hero text-->
-            <div class="absolute flex  flex-col gap-2.5 top-[50%] left-[14%] p-9 items-center text-center md:left-[45%] md:left-[30%]" style="border:2px solid white">
+            <div class="absolute flex  flex-col gap-2.5 top-72 left-14 p-9 items-center text-center md:left-[45%] md:left-[30%] lg:left-[30%] lg:top-[20%]" style="border:2px solid white">
                 <h2 class="text-logoBg font-thin" id="tracks">Tracks</h2>
-                <h1 class="text-3xl text-white font-extrabold" style="color: #ffffff;" id="urban">Allan deejay <br>experience</h1>
+                <h1 class="text-3xl text-white font-extrabold md:text-6xl lg:text-7xl " style="color: #ffffff;" id="urban">Allan deejay <br>experience</h1>
                 <!--ticket button-->
-                <button class=" px-6 text-center p-2.5 bg-navBg" style="border: none;">
+                <button class=" px-6 text-center p-2.5 bg-navBg hover:bg-blackBg" style="border: none;">
                     <a style="text-decoration: none; font-size:16px; color:#ffffff" href="#">GET TICKETS</a>
                 </button>
             </div>
@@ -71,14 +81,14 @@
             </div>
         </div>
         <!--biography-->
-        <div class="flex flex-col justify-between">
+        <div class="flex flex-col justify-between md:flex-row md:justify-between">
 
             <!--hero image-->
-            <div class="bg-heroBg" style="background-image: url(img/Smoke-HD.jpg); ">
+            <div class="md:w-6/12 md:bg-blackBg " id="heroimage">
                 <img src="img/c-hero.png" alt="herooo">
             </div>
             <!--boigaphy text -->
-            <div class="flex flex-col justify-between p-6 py-24 bg-blackBg gap-4">
+            <div class="flex flex-col justify-between p-6 py-24 bg-blackBg gap-4 md:w-6/12">
 
                 <!--biography text heading-->
                 <div class="flex flex-col justify-between text-center text-white">
@@ -87,10 +97,10 @@
                 </div>
 
                 <!--biography description paragraph-->
-                <div class="text-base flex flex-col gap-4 ">
+                <div class="text-base flex flex-col gap-4 md:text-center items-center">
                     <p class="text-whiteText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     <!-- the view more button -->
-                    <button class="bg-btnBg py-2 px-8 w-40"><a href="#" class="text-whiteText">View More</a></button>
+                    <button class="bg-btnBg py-2 px-8 w-40 hover:bg-blackBg"><a href="#" class="text-whiteText">View More</a></button>
                 </div>
             </div>
             <!--end of the biography text-->
