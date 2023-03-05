@@ -42,7 +42,7 @@
             <img src="assets/logo.png" alt="logo">
         </div>
         <!--the navigation list-->
-        <div class="fixed  h-0 transition-all w-full top-0 left-0 z-10  overflow-y-hidden text-white text-center md:relative md:h-full lg:m-auto" id="navlist">
+        <div class="fixed z-10 h-0 transition-all w-full top-0 left-0 z-10  overflow-y-hidden text-white text-center md:relative md:h-full lg:m-auto" id="navlist">
             <!--close btn-->
             <span class="absolute right-10 top-10 md:hidden lg:hidden" onclick="closeNav()"><img src="assets/close.png" alt="close"></span>
             <!--navigation links-->
@@ -65,7 +65,7 @@
         <!--hero page-->
         <div class="hero-page">
              <!--the hero text-->
-            <div class="absolute flex  flex-col gap-2.5 top-72 left-14 p-9 items-center text-center md:left-[45%] md:left-[30%] lg:left-[30%] lg:top-[20%]" style="border:2px solid white">
+            <div id="removeindex" class="absolute flex z-1 flex-col gap-2.5 top-72 left-14 p-9 items-center text-center md:left-[45%] md:left-[30%] lg:left-[30%] lg:top-[20%]" style="border:2px solid white">
                 <h2 class="text-logoBg font-thin" id="tracks">Tracks</h2>
                 <h1 class="text-3xl text-white font-extrabold md:text-6xl lg:text-7xl " style="color: #ffffff;" id="urban">Allan deejay <br>experience</h1>
                 <!--ticket button-->
@@ -77,7 +77,27 @@
             <!--Hero image-->
             <div class="h-auto  w-full md:h-auto ">
                 <img class="md:hidden w-full" id="hero-img" src="img/party-table-mini.jpg" alt="hero" >
-                <img class="hidden md:block w-full" src="img/party-tabled-compressed.jpg" alt="table">
+                <div id="background" style="background-image: url(img/table-bg.jpg); background-size:cover; transition: background-image 3s ease-in-out;" class="hidden md:block">
+                    <img class="hidden md:block w-full opacity-0" src="img/table-bg.jpg" alt="table">
+                </div>
+                <script>
+                    var backgroundIndex = 0;
+                    var backgrounds = ['img/table-bg.jpg', 'img/crowd.jpg', 'img/beach.jpg']
+
+                    changeImg();
+                    
+                    function changeImg(){
+                        var background = document.getElementById("background");
+                        background.style.backgroundImage = "url('"+backgrounds[backgroundIndex] +"')";
+                        backgroundIndex++;
+                        
+                        if (backgroundIndex == backgrounds.length){
+                            backgroundIndex = 0;
+                        }
+                        setTimeout(changeImg, 4000);
+                    }
+                </script>
+                
             </div>
         </div>
         <!--biography-->
@@ -303,10 +323,12 @@
     </main>
     <script>
         function openNav(){
-            document.getElementById("navlist").style.height = '100%'
+            document.getElementById("navlist").style.height = '100%';
+            document.getElementById("removeindex").style.display = 'none';
         }
         function closeNav(){
             document.getElementById("navlist").style.height = '0%'
+            document.getElementById("removeindex").style.display = 'flex';
         }
     </script>
 </body>

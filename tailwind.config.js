@@ -25,7 +25,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'heroBg': "url('/public/img/smoke-HD.jpg')",
+        'heroBg': "url('public/img/smoke-HD.jpg')",
+        'firstBg': "url('public/img/table-bg')",
       }
     },
   },
