@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
+<!--style for the nav bar-->
+<style>
+    #navlist{
+        background-image:linear-gradient(to right, purple, red);
+    }
+    @media only screen and (min-width: 768px) {
+        #navlist{
+            background: none;
+        }
+    }
+</style>
 <body>
     <!--allan deejay logo-->
     <div class="flex justify-center p-5 md:hidden bg-blackBg">
@@ -25,15 +36,15 @@
             <img src="assets/logo.png" alt="logo">
         </div>
         <!--the navigation list-->
-        <div class="fixed  h-0 transition-all w-full top-0 left-0 z-10  overflow-y-hidden text-white text-center lg:relative lg:h-full lg:bg-transparent" id="navlist" style="background-image:linear-gradient(to right, purple, red);">
+        <div class="fixed  h-0 transition-all w-full top-0 left-0 z-10  overflow-y-hidden text-white text-center md:relative md:h-full lg:m-auto" id="navlist">
             <!--close btn-->
-            <span class="absolute right-10 top-10 lg:hidden" onclick="closeNav()"><img src="assets/close.png" alt="close"></span>
+            <span class="absolute right-10 top-10 md:hidden lg:hidden" onclick="closeNav()"><img src="assets/close.png" alt="close"></span>
             <!--navigation links-->
-            <div class="list-none flex flex-col justify-between mt-40 p-5 gap-7 left-28 lg:flex-row ">
-                <li><a style="color: #ffffff; font-size:32px;" href="#">Home</a></li>
-                <li><a style="color: #ffffff; font-size:32px;" href="#">Hire</a></li>
-                <li><a style="color: #ffffff; font-size:32px;" href="#">About</a></li>
-                <li><a style="color: #ffffff; font-size:32px;" href="#">Contact</a></li>
+            <div class="list-none flex flex-col justify-between mt-40 p-5 gap-7 left-28 md:flex-row md:mt-auto md:justify-center md:p-1 md:text-2xl ">
+                <li><a class="md:text-2xl " style="color: #ffffff; font-size:32px;" href="#">Home</a></li>
+                <li><a class="md:text-2xl " style="color: #ffffff; font-size:32px;" href="#">Hire</a></li>
+                <li><a class="md:text-2xl " style="color: #ffffff; font-size:32px;" href="#">About</a></li>
+                <li><a class="md:text-2xl " style="color: #ffffff; font-size:32px;" href="#">Contact</a></li>
             </div>
         </div>
         <!--menu icon-->
@@ -245,25 +256,23 @@
         <!--end of service container-->
 
         <!--podcast container-->
-        <div class="flex flex-col justify-between p-8">
-            <div class="audios">
-                <div class="song">
-                    <h3>Allan megamix #1</h3>
-                    <audio src="music/Twakoriwodi By DiMagneto Wakwamugi.mp3" controls></audio>
-                </div>
-                <div class="song">
-                    <h3>Allan megamix #2</h3>
-                    <audio src="music/Twakoriwodi By DiMagneto Wakwamugi.mp3" controls></audio>
-                </div>
-                <div class="song">
-                    <h3>Allan megamix #3</h3>
-                    <audio src="music/Twakoriwodi By DiMagneto Wakwamugi.mp3" controls></audio>
-                </div>
+        <div class="flex flex-col justify-between p-8 gap-8">
+            <!--podcast heading-->
+            <div class="flex flex-col gap-4 text-center">
+                <h2 class="text-3xl font-bold text-navBg">MUSIC</h2>
+                <h1 class="text-xl font-bold text-grayishBg">PODCAST</h1>
             </div>
-            <div class="music-podcast">
-                <div class="podcast-heading">
-                    <h2>MUSIC</h2>
-                    <h1>PODCAST</h1>
+            <!--the audios and podcast button container-->
+            <div class="flex flex-col">
+                <!--the audios container-->
+                <div class="flex flex-col z-1">
+                    <div class="flex flex-col justify-between gap-4">
+                        <h3 class=" text-bold text-xl">Allan megamix #1</h3>
+                        <audio class="bg-navBg" controls>
+                            <source src="music/Twakoriwodi By DiMagneto Wakwamugi.mp3"> 
+                        </audio>
+                    </div>
+                   
                 </div>
                 <div class="podcast-para">
                     <p>DJR knows how to move your mind, body and soul by delivering tracks that stand out from the norm. As if this impressive succession of high impact, floor-filling bombs wasn’t enough to sustain.</p>
