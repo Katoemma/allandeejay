@@ -76,7 +76,26 @@
 
             <!--Hero image-->
             <div class="h-auto  w-full md:h-auto ">
-                <img class="md:hidden w-full" id="hero-img" src="img/party-table-mini.jpg" alt="hero" >
+                <div id="smallbg" class="md:hidden" style="background-image: url(img/table-bg.jpg); background-size:cover; transition: background-image 3s ease-in-out;">
+                    <img class="md:hidden w-full opacity-0" id="hero-img" src="img/party-table-mini.jpg" alt="hero" >
+                </div>
+                <script>
+                    var backgroundIndex = 0;
+                    var backgrounds = ['img/party-table-mini.jpg', 'img/crowd.jpg', 'img/beach.jpg']
+
+                    smallimg();
+                    
+                    function smallimg(){
+                        var smallBackground = document.getElementById("smallbg");
+                        smallBackground.style.backgroundImage = "url('"+backgrounds[backgroundIndex] +"')";
+                        backgroundIndex++;
+                        
+                        if (backgroundIndex == backgrounds.length){
+                            backgroundIndex = 0;
+                        }
+                        setTimeout(smallimg, 4000);
+                    }
+                </script>
                 <div id="background" style="background-image: url(img/table-bg.jpg); background-size:cover; transition: background-image 3s ease-in-out;" class="hidden md:block">
                     <img class="hidden md:block w-full opacity-0" src="img/table-bg.jpg" alt="table">
                 </div>
